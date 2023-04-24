@@ -4,8 +4,15 @@ project('plushys', ['cpp', 'c'],
   default_options: [ 'warning_level=2', 'werror=false', 'cpp_std=gnu++2a', ],
 )
 
+plushys_sources = [
+  'main.cpp',
+]
 
+plushys_deps = [
+]
 
-
-subdir('src')
+executable('plushys', plushys_sources,
+  dependencies: plushys_deps,
+  install: true,
+)
 
