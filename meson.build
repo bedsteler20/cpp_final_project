@@ -1,18 +1,31 @@
-project('plushys', ['cpp', 'c'],
-          version: '0.1.0',
+project(
+    'inventory  ',
+    ['cpp', 'c'],
+    version: '0.1.0',
     meson_version: '>= 0.62.0',
-  default_options: [ 'warning_level=2', 'werror=false', 'cpp_std=gnu++2a', ],
+    default_options: [
+        'warning_level=2',
+        'werror=false',
+        'cpp_std=gnu++2a',
+    ],
 )
 
-plushys_sources = [
-  'main.cpp',
+inventory_sources = [
+    'main.cpp',
+    'menu.cpp',
+    'computer.cpp',
+    'computer.hpp',
+    'menu.hpp',
+    'helpers.cpp',
+    'helpers.hpp',
 ]
 
-plushys_deps = [
-]
+inventory_deps = []
 
-executable('plushys', plushys_sources,
-  dependencies: plushys_deps,
-  install: true,
+executable(
+    'inventory',
+    inventory_sources,
+    dependencies: inventory_deps,
+    install: true,
 )
 

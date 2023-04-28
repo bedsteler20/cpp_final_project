@@ -1,9 +1,9 @@
-#include <iostream>
+#include <menu.hpp>
 
+#include <iostream>
 using namespace std;
 
 int main() {
-	cout << "Hello World\n";
-
-	return 0;
+    auto menu = Menu();
+    return menu.runLoop();
 }
